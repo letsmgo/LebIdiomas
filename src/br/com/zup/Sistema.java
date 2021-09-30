@@ -1,8 +1,14 @@
 package br.com.zup;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Sistema {
+
+    public static Scanner capturarDados(String msg) {
+        System.out.print(msg);
+        return new Scanner(System.in);
+    }
 
     public static void exibirMenu() {
         System.out.println("-----------------------------------");
@@ -42,6 +48,7 @@ public class Sistema {
 
 
     public static void executar() {
+
         Scanner input = new Scanner(System.in);
         Curso ingles = new Curso("Inglês", 4000, "1 ano e 6 meses", 9, "Let");
         Curso frances = new Curso("Francês", 2000, "6 meses", 3, "Elaine");
@@ -64,20 +71,40 @@ public class Sistema {
                 System.out.print("Informe um número referente a opção desejada: ");
                 opcaoDesejada = input.nextInt();
 
+                System.out.println();
+                System.out.println("---------------------");
+                System.out.println("|    Informações    |");
+                System.out.println("---------------------");
+
                 if (opcaoDesejada == 1) {
                     System.out.println(ingles);
+                    System.out.println("---------------------");
                 }
                 else if (opcaoDesejada == 2) {
                     System.out.println(frances);
+                    System.out.println("---------------------");
                 }
                 else if (opcaoDesejada == 3) {
                     System.out.println(espanhol);
+                    System.out.println("---------------------");
                 }
                 else {
                     System.out.println("Opção inválida!");
                 }
             }
             else if (opcaoDesejada == 3) {
+                System.out.println("-----------------------");
+                System.out.println("|  Ficha de cadastro  |");
+                System.out.println("-----------------------");
+                String nome = capturarDados("|  Nome: ").nextLine();
+                String cpf = capturarDados("|  CPF: ").nextLine();
+                String email = capturarDados("|  Email: ").nextLine();
+                String curso = capturarDados("|  Curso desejado: ").nextLine();
+                String resposta = capturarDados("|  Deseseja escolher outro curso? [S/N]  ").nextLine();
+                if (resposta.toUpperCase(Locale.ROOT).equals("S")) {
+                    String curso2 = capturarDados("|  Informe o outro curso de interesse: ").nextLine();
+                }
+                System.out.println("-----------------------");
 
             } else if (opcaoDesejada == 4) {
                 finalizar = true;

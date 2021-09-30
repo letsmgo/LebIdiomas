@@ -80,11 +80,11 @@ public class Curso {
   @Override
   public String toString() {
     StringBuilder mostrarCurso = new StringBuilder();
-    mostrarCurso.append("Curso: " + nomeDoCurso);
-    mostrarCurso.append("\nValor: " + valor);
-    mostrarCurso.append("\nDuração: " + duracao);
-    mostrarCurso.append("\nMódulos: " + qtdModulos);
-    mostrarCurso.append("\nProfessor: " + professor);
+    mostrarCurso.append("|  Curso: " + nomeDoCurso);
+    mostrarCurso.append("\n|  Valor: " + valor);
+    mostrarCurso.append("\n|  Duração: " + duracao);
+    mostrarCurso.append("\n|  Módulos: " + qtdModulos);
+    mostrarCurso.append("\n|  Professor: " + professor);
     return mostrarCurso.toString();
   }
 

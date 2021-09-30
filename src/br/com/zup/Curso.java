@@ -58,4 +58,17 @@ public class Curso {
         this.nomeDoCurso = nomeDoCurso;
     }
 
+    //Sobreescrevendo toString das Hash para trazer os valores dos objetos
+    @Override
+    public String toString() {
+        StringBuilder mostrarCurso = new StringBuilder();
+        mostrarCurso.append("Curso: " + nomeDoCurso);
+        mostrarCurso.append("Valor: " + valor);
+        mostrarCurso.append("Duração: " + duracao);
+        mostrarCurso.append("Módulos: " + qtdModulos);
+        mostrarCurso.append("Professor: " + professor);
+
+        return mostrarCurso.toString();
+    }
+
 }

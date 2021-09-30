@@ -81,12 +81,10 @@ public class Curso {
   public String toString() {
     StringBuilder mostrarCurso = new StringBuilder();
     mostrarCurso.append("Curso: " + nomeDoCurso);
-    mostrarCurso.append("Valor: " + valor);
-    mostrarCurso.append("Duração: " + duracao);
-    mostrarCurso.append("Módulos: " + qtdModulos);
-    mostrarCurso.append("Professor: " + professor);
-    mostrarCurso.append("Lista de alunos: " + alunos);
-
+    mostrarCurso.append("\nValor: " + valor);
+    mostrarCurso.append("\nDuração: " + duracao);
+    mostrarCurso.append("\nMódulos: " + qtdModulos);
+    mostrarCurso.append("\nProfessor: " + professor);
     return mostrarCurso.toString();
   }
 

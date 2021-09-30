@@ -28,20 +28,65 @@ public class Sistema {
         System.out.println("|                                              |");
         System.out.println("|          -desconto não acumulativo-          |");
         System.out.println("------------------------------------------------");
+        System.out.println("Fim de exibição!");
+        System.out.println();
+    }
 
+    public static void exibirListaDeCursos() {
+        System.out.println("------------------------------------------------------------");
+        System.out.println("|  Digite 1 para saber mais sobre nosso curso de INGLêS    |");
+        System.out.println("|  Digite 2 para saber mais sobre nosso curso de FRANCÊS   |");
+        System.out.println("|  Digite 3 para saber mais sobre nosso curso de ESPANHOL  |");
+        System.out.println("------------------------------------------------------------");
     }
 
 
     public static void executar() {
         Scanner input = new Scanner(System.in);
+        Curso ingles = new Curso("Inglês", 4000, "1 ano e 6 meses", 9, "Let");
+        Curso frances = new Curso("Francês", 2000, "6 meses", 3, "Elaine");
+        Curso espanhol = new Curso("Espanhol", 3500, "1 ano", 6, "Barbara");
 
-        char resposta = 'N';
+        int opcaoDesejada;
+        boolean finalizar = false;
 
-        int diaMatricula;
+        while (!finalizar) {
 
-        exibirMenu();
-        System.out.print("Você gostaria de agendar sua matrícula? [s/n]  ");
-        resposta = input.nextLine().charAt(0);
+            exibirMenu();
+            System.out.print("Informe um número referente a opção desejada: ");
+            opcaoDesejada = input.nextInt();
+
+            if (opcaoDesejada == 1) {
+                exibirCatalogo();
+            }
+            else if (opcaoDesejada == 2) {
+                exibirListaDeCursos();
+                System.out.print("Informe um número referente a opção desejada: ");
+                opcaoDesejada = input.nextInt();
+
+                if (opcaoDesejada == 1) {
+                    System.out.println(ingles);
+                }
+                else if (opcaoDesejada == 2) {
+                    System.out.println(frances);
+                }
+                else if (opcaoDesejada == 3) {
+                    System.out.println(espanhol);
+                }
+                else {
+                    System.out.println("Opção inválida!");
+                }
+            }
+            else if (opcaoDesejada == 3) {
+
+            } else if (opcaoDesejada == 4) {
+                finalizar = true;
+                System.out.println("Até breve");
+            }
+            else {
+                System.out.println("Opção inválida!");
+            }
+        }
 
 
 

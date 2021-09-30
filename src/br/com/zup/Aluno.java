@@ -13,4 +13,29 @@ public class Aluno {
         this.email = email;
         this.curso = curso;
     }
+
+    //Getters and Setters
+    public String getNomeDoAluno() {
+        return nomeDoAluno;
+    }
+
+    public void setNomeDoAluno(String nomeDoAluno) {
+        this.nomeDoAluno = nomeDoAluno;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

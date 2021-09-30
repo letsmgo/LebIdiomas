@@ -1,17 +1,20 @@
 package br.com.zup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno {
     private String nomeDoAluno;
     private String cpf;
     private String email;
-    Curso curso;
+    private String cursoEscolhido;
 
     //Método construtor
-    public Aluno(String nomeDoAluno, String cpf, String email, Curso curso) {
+    public Aluno(String nomeDoAluno, String cpf, String email, String cursoEscolhido) {
         this.nomeDoAluno = nomeDoAluno;
         this.cpf = cpf;
         this.email = email;
-        this.curso = curso;
+        this.cursoEscolhido = cursoEscolhido;
     }
 
     //Getters and Setters
@@ -46,7 +49,7 @@ public class Aluno {
         mostrarDados.append("Nome do aluno: " + nomeDoAluno);
         mostrarDados.append("Cpf: " + cpf);
         mostrarDados.append("E-mail :" + email);
-        mostrarDados.append("Curso escolhido: " + curso);
+        mostrarDados.append("Curso escolhido: " + cursoEscolhido);
         return mostrarDados.toString();
     }
 }

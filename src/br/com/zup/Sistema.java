@@ -11,12 +11,13 @@ public class Sistema {
     }
 
     public static void exibirMenu() {
-        System.out.println("-----------------------------------");
-        System.out.println("|  Digite 1 para exibir catálogo  |");
-        System.out.println("|  Digite 2 para escolher curso   |");
-        System.out.println("|  Digite 3 para se cadastrar     |");
-        System.out.println("|  Digite 4 para sair             |");
-        System.out.println("-----------------------------------");
+        System.out.println("---------------------------------------");
+        System.out.println("|  Digite 1 para exibir catálogo      |");
+        System.out.println("|  Digite 2 para escolher curso       |");
+        System.out.println("|  Digite 3 para se cadastrar         |");
+        System.out.println("|  Digite 4 para vizualizar cadastro  |");
+        System.out.println("|  Digite 5 para sair                 |");
+        System.out.println("---------------------------------------");
     }
 
     public static void exibirCatalogo() {
@@ -46,6 +47,13 @@ public class Sistema {
         System.out.println("|  Digite 2 para saber mais sobre nosso curso de FRANCÊS   |");
         System.out.println("|  Digite 3 para saber mais sobre nosso curso de ESPANHOL  |");
         System.out.println("------------------------------------------------------------");
+    }
+
+    public static void verificarCurso(String cursoDesejado) {
+        cursoDesejado = cursoDesejado.toLowerCase(Locale.ROOT);
+        if (cursoDesejado.equals("ingles") | cursoDesejado.equals("inglês")) {
+
+        }
     }
 
 
@@ -103,10 +111,10 @@ public class Sistema {
                 String cpf = capturarDados("|  CPF: ").nextLine();
                 String email = capturarDados("|  Email: ").nextLine();
                 String curso = capturarDados("|  Curso desejado: ").nextLine();
-                curso = curso.toLowerCase(Locale.ROOT);
-                String resposta = capturarDados("|  Deseseja escolher outro curso? [S/N]  ").nextLine();
-                if (resposta.toUpperCase(Locale.ROOT).equals("S")) {
-                    String curso2 = capturarDados("|  Informe o outro curso de interesse: ").nextLine();
+                int diaPagamento = capturarDados("|  Dia do pagamento: ").nextInt();
+                if (diaPagamento <= 20 & diaPagamento > 0) {
+                    cursos.aplicarDesconto(diaPagamento);
+                    System.out.println("|  Desconto aplicado com sucesso!");
                 }
                 System.out.println("-----------------------");
                 Aluno aluno = new Aluno(nome,cpf,email,curso);
@@ -114,6 +122,9 @@ public class Sistema {
                 System.out.println("Cadastro efetuado com sucesso! Você receberá seus dados de acesso pelo email informado.");
 
             } else if (opcaoDesejada == 4) {
+                System.out.println(cursos.getAlunos());
+            }
+            else if (opcaoDesejada == 5) {
                 finalizar = true;
                 System.out.println("Até breve");
             }

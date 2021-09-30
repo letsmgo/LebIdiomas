@@ -10,5 +10,9 @@ public class Ingles extends Curso {
     super(nomeDoCurso, valor, duracao, qtdModulos, professor);
   }
 
+  public void adicionarAlunoIngles (Ingles novoAlunoIngles){
+    inglesList.add(novoAlunoIngles);
+  }
+
 
 }

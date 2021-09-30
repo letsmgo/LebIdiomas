@@ -40,7 +40,9 @@ public class Sistema {
 
     public static void exibirListaDeCursos() {
         System.out.println("------------------------------------------------------------");
-        System.out.println("|  Digite 1 para saber mais sobre nosso curso de INGLêS    |");
+        System.out.println("|                     LISTA DE CURSOS                      |");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("|  Digite 1 para saber mais sobre nosso curso de INGLÊS    |");
         System.out.println("|  Digite 2 para saber mais sobre nosso curso de FRANCÊS   |");
         System.out.println("|  Digite 3 para saber mais sobre nosso curso de ESPANHOL  |");
         System.out.println("------------------------------------------------------------");
@@ -50,6 +52,7 @@ public class Sistema {
     public static void executar() {
 
         Scanner input = new Scanner(System.in);
+        Curso cursos = new Curso();
         Curso ingles = new Curso("Inglês", 4000, "1 ano e 6 meses", 9, "Let");
         Curso frances = new Curso("Francês", 2000, "6 meses", 3, "Elaine");
         Curso espanhol = new Curso("Espanhol", 3500, "1 ano", 6, "Barbara");
@@ -100,11 +103,15 @@ public class Sistema {
                 String cpf = capturarDados("|  CPF: ").nextLine();
                 String email = capturarDados("|  Email: ").nextLine();
                 String curso = capturarDados("|  Curso desejado: ").nextLine();
+                curso = curso.toLowerCase(Locale.ROOT);
                 String resposta = capturarDados("|  Deseseja escolher outro curso? [S/N]  ").nextLine();
                 if (resposta.toUpperCase(Locale.ROOT).equals("S")) {
                     String curso2 = capturarDados("|  Informe o outro curso de interesse: ").nextLine();
                 }
                 System.out.println("-----------------------");
+                Aluno aluno = new Aluno(nome,cpf,email,curso);
+                cursos.adicionarAluno(aluno);
+                System.out.println("Cadastro efetuado com sucesso!");
 
             } else if (opcaoDesejada == 4) {
                 finalizar = true;

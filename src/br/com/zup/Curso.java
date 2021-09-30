@@ -20,6 +20,9 @@ public class Curso {
     this.professor = professor;
   }
 
+  public Curso() {
+  }
+
   //Getters and Setters
   public double getValor() {
     return valor;
@@ -61,6 +64,14 @@ public class Curso {
     this.nomeDoCurso = nomeDoCurso;
   }
 
+  public List<Aluno> getAlunos() {
+    return alunos;
+  }
+
+  public void setAlunos(List<Aluno> alunos) {
+    this.alunos = alunos;
+  }
+
   public void adicionarAluno(Aluno novoAluno) {
     alunos.add(novoAluno);
   }
@@ -85,6 +96,7 @@ public class Curso {
     mostrarCurso.append("\n|  Duração: " + duracao);
     mostrarCurso.append("\n|  Módulos: " + qtdModulos);
     mostrarCurso.append("\n|  Professor: " + professor);
+    mostrarCurso.append("\n|  Alunos: " + alunos);
     return mostrarCurso.toString();
   }
 

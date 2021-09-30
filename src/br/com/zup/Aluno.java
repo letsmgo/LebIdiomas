@@ -38,4 +38,15 @@ public class Aluno {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    //Sobreescrevendo toString das Hash para trazer os valores dos objetos
+    @Override
+    public String toString() {
+        StringBuilder mostrarDados = new StringBuilder();
+        mostrarDados.append("Nome do aluno: " + nomeDoAluno);
+        mostrarDados.append("Cpf: " + cpf);
+        mostrarDados.append("E-mail :" + email);
+        mostrarDados.append("Curso escolhido: " + curso);
+        return mostrarDados.toString();
+    }
 }

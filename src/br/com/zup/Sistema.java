@@ -1,6 +1,17 @@
 package br.com.zup;
 
+import java.util.Scanner;
+
 public class Sistema {
+
+    public static void exibirMenu() {
+        System.out.println("-----------------------------------");
+        System.out.println("|  Digite 1 para exibir catálogo  |");
+        System.out.println("|  Digite 2 para escolher curso   |");
+        System.out.println("|  Digite 3 para se cadastrar     |");
+        System.out.println("|  Digite 4 para sair             |");
+        System.out.println("-----------------------------------");
+    }
 
     public static void exibirCatalogo() {
         System.out.println();
@@ -17,6 +28,23 @@ public class Sistema {
         System.out.println("|                                              |");
         System.out.println("|          -desconto não acumulativo-          |");
         System.out.println("------------------------------------------------");
+
+    }
+
+
+    public static void executar() {
+        Scanner input = new Scanner(System.in);
+
+        char resposta = 'N';
+
+        int diaMatricula;
+
+        exibirMenu();
+        System.out.print("Você gostaria de agendar sua matrícula? [s/n]  ");
+        resposta = input.nextLine().charAt(0);
+
+
+
     }
 
 }

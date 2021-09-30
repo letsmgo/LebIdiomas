@@ -16,4 +16,46 @@ public class Curso {
         this.qtdModulos = qtdModulos;
         this.professor = professor;
     }
+
+    //Getters and Setters
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(String duracao) {
+        this.duracao = duracao;
+    }
+
+    public int getQtdModulos() {
+        return qtdModulos;
+    }
+
+    public void setQtdModulos(int qtdModulos) {
+        this.qtdModulos = qtdModulos;
+    }
+
+    public String getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(String professor) {
+        this.professor = professor;
+    }
+
+    public String getNomeDoCurso() {
+        return nomeDoCurso;
+    }
+
+    public void setNomeDoCurso(String nomeDoCurso) {
+        this.nomeDoCurso = nomeDoCurso;
+    }
+
 }

@@ -14,5 +14,11 @@ public class Ingles extends Curso {
     inglesList.add(novoAlunoIngles);
   }
 
-
+  @Override
+  public String toString() {
+    StringBuilder mostrarDados = new StringBuilder();
+    mostrarDados.append(super.toString());
+    mostrarDados.append("Lista de alunos" + inglesList);
+    return mostrarDados.toString();
+  }
 }

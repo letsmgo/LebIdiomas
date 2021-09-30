@@ -78,12 +78,8 @@ public class Curso {
 
   //Método para calcular descontos
 
-  public double calcularDesconto(int dia) {
-    if (dia <= 20 & dia > 0) {
+  public double aplicarDesconto(int dia) {
       valor -= 0.25 * valor;
-    } else {
-      System.out.println("Dia inválido!");
-    }
     return valor;
   }
 

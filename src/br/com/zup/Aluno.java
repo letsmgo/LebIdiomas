@@ -46,10 +46,11 @@ public class Aluno {
     @Override
     public String toString() {
         StringBuilder mostrarDados = new StringBuilder();
-        mostrarDados.append("Nome do aluno: " + nomeDoAluno);
-        mostrarDados.append("Cpf: " + cpf);
-        mostrarDados.append("E-mail :" + email);
-        mostrarDados.append("Curso escolhido: " + cursoEscolhido);
+        mostrarDados.append("  Nome do aluno: " + nomeDoAluno);
+        mostrarDados.append("\n|  Cpf: " + cpf);
+        mostrarDados.append("\n|  E-mail :" + email);
+        mostrarDados.append("\n|  Curso escolhido: " + cursoEscolhido);
+        mostrarDados.append("\n");
         return mostrarDados.toString();
     }
 }

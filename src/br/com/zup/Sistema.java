@@ -111,7 +111,7 @@ public class Sistema {
                 System.out.println("-----------------------");
                 Aluno aluno = new Aluno(nome,cpf,email,curso);
                 cursos.adicionarAluno(aluno);
-                System.out.println("Cadastro efetuado com sucesso!");
+                System.out.println("Cadastro efetuado com sucesso! Você receberá seus dados de acesso pelo email informado.");
 
             } else if (opcaoDesejada == 4) {
                 finalizar = true;

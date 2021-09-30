@@ -96,7 +96,6 @@ public class Curso {
     mostrarCurso.append("\n|  Duração: " + duracao);
     mostrarCurso.append("\n|  Módulos: " + qtdModulos);
     mostrarCurso.append("\n|  Professor: " + professor);
-    mostrarCurso.append("\n|  Alunos: " + alunos);
     return mostrarCurso.toString();
   }
 

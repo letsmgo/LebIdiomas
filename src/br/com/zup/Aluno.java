@@ -1,9 +1,7 @@
 package br.com.zup;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Aluno {
+
     private String nomeDoAluno;
     private String cpf;
     private String email;

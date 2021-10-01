@@ -4,15 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
-  private String nomeDoCurso;
-  private double valor;
-  private String duracao;
+  private String nomeDoCurso, segundoCurso, terceiroCurso, duracao, professor;
   private int qtdModulos;
-  private String professor;
+  private double valor;
   List<Aluno> alunos = new ArrayList<>();
 
   //Método construtor
   public Curso(String nomeDoCurso, double valor, String duracao, int qtdModulos, String professor) {
+    this.nomeDoCurso = nomeDoCurso;
+    this.valor = valor;
+    this.duracao = duracao;
+    this.qtdModulos = qtdModulos;
+    this.professor = professor;
+  }
+
+  public Curso(String nomeDoCurso, String segundoCurso, double valor, String duracao, int qtdModulos, String professor) {
+    this.nomeDoCurso = nomeDoCurso;
+    this.valor = valor;
+    this.duracao = duracao;
+    this.qtdModulos = qtdModulos;
+    this.professor = professor;
+  }
+
+  public Curso(String nomeDoCurso, String segundoCurso, String terceiroCurso, double valor, String duracao, int qtdModulos, String professor) {
     this.nomeDoCurso = nomeDoCurso;
     this.valor = valor;
     this.duracao = duracao;
@@ -30,6 +44,22 @@ public class Curso {
 
   public void setValor(double valor) {
     this.valor = valor;
+  }
+
+  public String getSegundoCurso() {
+    return segundoCurso;
+  }
+
+  public void setSegundoCurso(String segundoCurso) {
+    this.segundoCurso = segundoCurso;
+  }
+
+  public String getTerceiroCurso() {
+    return terceiroCurso;
+  }
+
+  public void setTerceiroCurso(String terceiroCurso) {
+    this.terceiroCurso = terceiroCurso;
   }
 
   public String getDuracao() {
@@ -68,19 +98,14 @@ public class Curso {
     return alunos;
   }
 
-  public void setAlunos(List<Aluno> alunos) {
-    this.alunos = alunos;
-  }
-
   public void adicionarAluno(Aluno novoAluno) {
     alunos.add(novoAluno);
   }
 
   //Método para calcular descontos
 
-  public double aplicarDesconto(int dia) {
+  public void aplicarDesconto(int dia) {
       valor -= 0.25 * valor;
-    return valor;
   }
 
   //Sobreescrevendo toString das Hash para trazer os valores dos objetos
